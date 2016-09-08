@@ -26,7 +26,7 @@
 				$.post("/student", url, function(data){
 						
 						if(data[0].status == 1){
-							window.location.href = '/statuscreateuser.html?success';
+							window.location.href = '/beginGame.html?success';
 						} else {
 							window.location.href = '/statuscreateuser.html?error';
 						}
@@ -46,12 +46,12 @@
 		<br>
 		<form class="form-horizontal" method="post" id="form">
 			<div class="form-group form-group">
-				<label for="inputEmail3" class="col-md-4 control-label">User Name(Usuário)</label>
+				<label for="inputEmail3" class="col-md-4 control-label">Email</label>
 				<div class="col-md-4">
 					<input required="required" type="email" class="form-control" id="userName" placeholder="Email">
 				</div>
 				<div class="col-md-4">
-					<label for="inputEmail3" class="control-label">Ex: TiagoRFaria</label>
+					<label for="inputEmail3" class="control-label">Ex: tiago.rfaria@hotmail.com</label>
 				</div>
 			</div>
 			
@@ -68,12 +68,12 @@
 			</div>
 			
 			<div class="form-group">
-				<label for="" class="col-md-4 control-label">Email</label>
+				<label for="" class="col-md-4 control-label">Usuário</label>
 				<div class="col-md-4">
 					<input required="required" type="" class="form-control" id="name" placeholder="Nome">
 				</div>
 				<div class="col-md-4">
-					<label for="inputEmail3" class="control-label">Ex: tiago@blabla.com</label>
+					<label for="inputEmail3" class="control-label">Ex: tiago.rfaria</label>
 				</div>
 				
 			</div>
