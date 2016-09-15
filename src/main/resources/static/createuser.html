@@ -15,18 +15,19 @@
 			$('form').submit(function(e){
 				e.preventDefault();
 				
+				var email = $('#email').val();
 				var userName = $('#userName').val();
 				var password = $('#password').val();
-				var email = $('#email').val();
+				var confirm_password = $('#confirm_password').val();
 				
-				var url = JSON.stringify({"userName":userName,"password":password,"Email"});
+				var url = JSON.stringify({"email":email,"userName":userName,"password":password,"confirm_password":});
 				
 				
 				
 				$.post("/student", url, function(data){
 						
 						if(data[0].status == 1){
-							window.location.href = '/beginGame.html?success';
+							window.location.href = '/begingame.html?success';
 						} else {
 							window.location.href = '/statuscreateuser.html?error';
 						}
@@ -54,19 +55,7 @@
 					<label for="inputEmail3" class="control-label">Ex: tiago.rfaria@hotmail.com</label>
 				</div>
 			</div>
-			
-			
-			
-			<div class="form-group">
-				<label for="inputPassword3" class="col-md-4 control-label">Senha</label>
-				<div class="col-md-4">
-					<input required="required" type="password" class="form-control" id="password" placeholder="Senha">
-				</div>
-				<div class="col-md-4">
-					<label for="inputEmail3" class="control-label">Ex: 12345</label>
-				</div>
-			</div>
-			
+
 			<div class="form-group">
 				<label for="" class="col-md-4 control-label">Usuário</label>
 				<div class="col-md-4">
@@ -76,6 +65,26 @@
 					<label for="inputEmail3" class="control-label">Ex: tiago.rfaria</label>
 				</div>
 				
+			</div>			
+			
+			<div class="form-group">
+				<label for="inputPassword3" class="col-md-4 control-label">Senha</label>
+				<div class="col-md-4">
+					<input required="required" type="password" class="form-control" id="password" placeholder="Senha">
+				</div>
+				<div class="col-md-4">
+					<label for="inputEmail3" class="control-label">Ex: 12345</label>
+				</div>
+			</div
+
+			<div class="form-group">
+				<label for="inputPassword4" class="col-md-4 control-label">Senha</label>
+				<div class="col-md-4">
+					<input required="required" type="password" class="form-control" id="confirm_password" placeholder="Confirma senha">
+				</div>
+				<div class="col-md-4">
+					<label for="inputEmail3" class="control-label">Ex: 12345</label>
+				</div>
 			</div>
 		
 																	
